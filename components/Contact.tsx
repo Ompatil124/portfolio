@@ -214,7 +214,7 @@ export default function Contact() {
             aria-label="Contact form"
           >
             {/* ── Honeypot — hidden from humans, visible to bots ── */}
-            <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', opacity: 0, pointerEvents: 'none', tabIndex: -1 }}>
+            <div aria-hidden="true" tabIndex={-1} style={{ position: 'absolute', left: '-9999px', opacity: 0, pointerEvents: 'none' }}>
               <label htmlFor={`${id}-website`}>Website (leave blank)</label>
               <input
                 id={`${id}-website`}
@@ -363,12 +363,12 @@ export default function Contact() {
               disabled={status === 'sending' || status === 'sent'}
               whileTap={{ scale: 0.98 }}
               className={`relative w-full p-4 font-syne font-bold text-[0.88rem] tracking-wider transition-all duration-300 overflow-hidden btn-magnetic ${status === 'sent'
-                  ? 'bg-[#7ee787] text-black cursor-default'
-                  : status === 'error'
-                    ? 'bg-[#ff5f57] text-white cursor-not-allowed'
-                    : status === 'sending'
-                      ? 'bg-[#c8ff00]/60 text-black cursor-not-allowed'
-                      : 'bg-[#c8ff00] text-black hover:bg-white hover:-translate-y-0.5'
+                ? 'bg-[#7ee787] text-black cursor-default'
+                : status === 'error'
+                  ? 'bg-[#ff5f57] text-white cursor-not-allowed'
+                  : status === 'sending'
+                    ? 'bg-[#c8ff00]/60 text-black cursor-not-allowed'
+                    : 'bg-[#c8ff00] text-black hover:bg-white hover:-translate-y-0.5'
                 }`}
               aria-live="polite"
             >
