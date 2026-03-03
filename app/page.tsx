@@ -10,7 +10,7 @@ import CustomCursor from '@/components/CustomCursor';
 
 export default function Home() {
   return (
-    <main className="relative">
+    <>
       <CustomCursor />
       <Navbar />
       <Hero />
@@ -20,9 +20,6 @@ export default function Home() {
       <Process />
       <Contact />
       <Footer />
-      
-      {/* Noise Overlay */}
-      <div className="fixed inset-0 pointer-events-none z-[1000] opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
-    </main>
+    </>
   );
 }
